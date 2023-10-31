@@ -10,7 +10,7 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: ['type', 'builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'unknown'],
+        groups: ['type', 'builtin', 'external', 'internal', ['parent', 'sibling', 'index'], 'unknown'],
         pathGroups: [
           {
             pattern: 'react*',
@@ -33,11 +33,11 @@ module.exports = {
             position: 'after',
           },
         ],
-
         pathGroupsExcludedImportTypes: ['@tanstack*'],
         alphabetize: {
           order: 'asc',
         },
+        'newlines-between': 'always',
       },
     ],
     'no-restricted-imports': [
